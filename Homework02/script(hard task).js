@@ -1,8 +1,10 @@
+'use strict'
+
 /**
  * функция спрашивает у пользователя сумму денег
- * @returns {string} 
+ * @returns {string} возвращает ответ пользователя
  */
-function askSumMoney() {
+ let askSumMoney = function() {
     return prompt('Какую сумму вы хотите положить на счёт в банке?');
 }
 
@@ -13,18 +15,21 @@ function askSumMoney() {
  */
 function programResponse(sum) {
     let resultLength = sum.length - 1;
-    switch (sum) {
+    if(sum == "" || isNaN(sum)) {
+        alert('Вы ввели некорректные данные, введите данные повторно!');
+        programResponse(askSumMoney());
+        return;
+    }
+     
+
+    switch (sum.slice(-2)) {
         case '11':
         case '12':
         case '13':
         case '14':
-        case '15':
-        case '16':
-        case '17':
-        case '18':
-        case '19':
             alert(`Ваша сумма в ${sum} рублей успешно зачислена`);
-            break;
+            return;
+            
     }
 
     switch (sum.charAt(resultLength)) {
@@ -36,17 +41,11 @@ function programResponse(sum) {
         case '4':
             alert(`Ваша сумма в ${sum} рубля успешно зачислена`);
             break;
-        case '0':
-        case '5':
-        case '6':
-        case '7':
-        case '8':
-        case '9':
+        default:
             alert(`Ваша сумма в ${sum} рублей успешно зачислена`);
             break;
     }
-
+    
 }
-
 
 programResponse(askSumMoney())
