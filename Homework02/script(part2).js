@@ -1,3 +1,4 @@
+'use strict'
 //четвёртое и пятое задание
 
 let sum = (a, b) => a + b;
@@ -42,5 +43,7 @@ function mathOperation(arg1, arg2, operation) {
     }
 }
 
-let result = mathOperation(10, 5, '/');
-console.log(result);
+console.log(mathOperation(10, 5, '-'));
+console.log(mathOperation(10, 25, '+'));
+console.log(mathOperation(20, 3, '*'));
+console.log(mathOperation(10, 0, '/'));
