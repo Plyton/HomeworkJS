@@ -65,14 +65,12 @@
         ];
 
         products.forEach(function (value, index) {
-            let price = products[index].price;
-            products[index].price = price + price / 100 * 15;
-
+            products[index].price -= products[index].price / 100 * 15;
         })
         console.log(products);
 
         // Четвёртое задание
-        const otherProducts = [
+        let otherProducts = [
             {
                 id: 3,
                 price: 127,
@@ -100,15 +98,8 @@
 
         console.log(productsHasPhotos);
 
-        otherProducts.sort(function (a, b) {
-            if (a.price > b.price) {
-                return 1
-            }
-            if (a.price < b.price) {
-                return -1;
-            }
-        })
-
+        otherProducts.sort((a, b) => a.price - b.price)
+     
         console.log(otherProducts);
 
         //Шестое задание
