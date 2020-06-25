@@ -1,0 +1,59 @@
+:focus {
+    outline: none;
+}
+
+button {
+    font-size: 30px;
+    box-shadow: 0 2px 5px 1px rgba(33, 33, 33, 0.35);
+    background-color: aqua;
+    border: none;
+    border-radius: 15px;
+    margin: 15px 0 0 15px;
+}
+
+button:active {
+    box-shadow: none;
+    
+}
+
+.window {
+    width: 400px;
+    height: 200px;
+    font-size: 50px;
+    background-color: rgb(168, 28, 28);
+    position: absolute;
+    left: 800px;
+    top: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color: yellow;
+    border: 2px solid black;
+    border-radius: 30px;
+    animation-name: square;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-duration: 0.65s;
+    animation-fill-mode: both;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+
+@keyframes square {
+    0% {
+        -webkit-transform: scale(1) rotateZ(0);
+        transform: scale(1) rotateZ(0);
+    }
+
+    50% {
+        -webkit-transform: scale(2) rotateZ(180deg);
+        transform: scale(2) rotateZ(180deg);
+    }
+
+    100% {
+        -webkit-transform: scale(1) rotateZ(360deg);
+        transform: scale(1) rotateZ(360deg);
+        
+    }
+}

@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    width: 1024px;
+}
+
+.product {
+    margin-left: 30px;
+}
+
+.product-name {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.desc {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 20px;
+} 
+
+img {
+    display: block;
+    margin-bottom: 20px;
+    width: 300px;
+    height: 200px;
+}

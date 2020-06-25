@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="product">
+        <span class="product-name">Product1</span>
+
+        <img src="img/card1.jpg" width="300" height="200" alt="img">
+        <button>Подробнее</button>
+    </div>
+    <div class="product">
+        <span class="product-name">Product2</span>
+
+        <img src="img/card2.jpg" width="300" height="200" alt="img">
+        <button>Подробнее</button>
+    </div>
+    <div class="product">
+        <span class="product-name">Product3</span>
+
+        <img src="img/card3.jpg" width="300" height="200" alt="img">
+        <button>Подробнее</button>
+    </div>
+
+    <script>
+        'use strict'
+        let button = document.querySelectorAll('button');
+
+
+        button.forEach((element) => {
+            element.addEventListener('click', function (event) {
+
+                if (event.target.innerText === 'Подробнее') {
+                    event.target.innerText = 'Отмена';
+                    let div = document.createElement('div')
+                    div.className = 'desc'
+                    div.innerText = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. At et cum molestias quia quam consequatur, minus expedita culpa eos quasi nam! Repellat quaerat sapiente est architecto soluta deleniti officiis quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quae animi voluptatem soluta. Placeat id itaque necessitatibus illo fuga ipsam? Tenetur possimus quaerat officia  quis veniam esse deserunt eum reiciendis?'
+                    event.target.parentNode.insertBefore(div, event.target.parentNode.querySelector('img'))
+                    event.target.parentNode.querySelector('img').style.display = 'none'
+
+                }
+                else {
+                    event.target.innerText = 'Подробнее';
+                    event.target.parentNode.querySelector('.desc').remove()
+                    event.target.parentNode.querySelector('img').style.display = 'block'
+
+                }
+
+            })
+        })
+
+    </script>
+</body>
+
+</html>
