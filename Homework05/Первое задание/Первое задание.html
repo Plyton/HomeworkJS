@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 </head>
 
 <body>
@@ -15,23 +16,22 @@
 <script>
     'use strict'
     let flag = false // кнопка выкл.
-    document.querySelector('button').addEventListener('click', function(event) {
+    document.querySelector('button').addEventListener('click', function (event) {
         if (!flag) {
             let div = document.querySelector('div');
             div.innerText = 'Attention!';
-            div.className = 'window';
+            div.className = 'animate__animated animate__zoomInDown window';
             flag = true;
         } else {
             let div = document.querySelector('div');
-            div.innerText = '';
-            div.classList.remove('window');
+            div.classList.replace('animate__zoomInDown', 'animate__zoomOutUp')
             flag = false;
         }
 
     })
 
 
-   
+
 
 </script>
 

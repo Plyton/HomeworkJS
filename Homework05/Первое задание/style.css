@@ -31,16 +31,16 @@ button:active {
     color: yellow;
     border: 2px solid black;
     border-radius: 30px;
-    animation-name: square;
+    /* animation-name: square;
     animation-timing-function: linear;
     animation-iteration-count: 1;
     animation-duration: 0.65s;
     animation-fill-mode: both;
     animation-direction: normal;
-    animation-play-state: running;
+    animation-play-state: running; */
 }
 
-@keyframes square {
+/* @keyframes square {
     0% {
         -webkit-transform: scale(1) rotateZ(0);
         transform: scale(1) rotateZ(0);
@@ -56,4 +56,4 @@ button:active {
         transform: scale(1) rotateZ(360deg);
         
     }
-}
+} */
