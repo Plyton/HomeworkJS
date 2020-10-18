@@ -40,6 +40,5 @@ class Basket {
             )
         })
     }
-
 }
 let basket = new Basket();
