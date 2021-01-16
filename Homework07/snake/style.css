@@ -1,5 +1,5 @@
 body {
-    background: url('img/snake.jpg');
+    background: grey;
 }
 
 .container {
@@ -166,6 +166,20 @@ button:hover {
 button:active {
     background: #9cfb02;
     color: black;
+}
+
+label:hover {
+    color: yellow;
+    cursor: pointer;
+}
+
+label:active {
+    color: white;
+    
+}
+
+input[type="radio"] {
+    visibility: hidden;
 }
 
 .parameters--z-index {
