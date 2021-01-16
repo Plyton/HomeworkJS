@@ -340,7 +340,7 @@ class Game {
     setFlag(event) {
         !event.target.classList.contains('td--image') ? event.target.classList.add('td--image') : event.target.classList.remove('td--image');
     }
-//тут вся магия
+
     checkNearbyCells(x, y) {
         let tdElems = [];
         let coordsNearbyCells = [
