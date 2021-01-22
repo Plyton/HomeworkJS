@@ -1,3 +1,26 @@
+
+}
+
+@media (max-width: 720px) {
+    span {
+        font-size: 25px;
+    }
+}
+
+.header {
+    display: none;
+}
+
+@media (max-width: 720px) {
+    .header {
+        display: block;
+        position: absolute;
+        bottom: 70%;
+        font-size: 43px;
+        text-transform: uppercase;
+        font-family: fantasy;
+        color: yellow;
+    }
 }
 
 .container {

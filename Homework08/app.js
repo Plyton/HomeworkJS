@@ -114,6 +114,7 @@ class Game {
 
     _init() {
 
+
     }
 
     cellClickHandler(event) {
